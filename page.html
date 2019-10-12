@@ -237,6 +237,21 @@
         .logo:hover .logo-border {
             clip-path: polygon(50% 12%, 83% 12%, 83% 83%, 50% 83%, 17% 83%, 17% 12%);
         }
+        .gallery{
+            text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .gallery img{
+            width: 30%;
+            margin-bottom: 20px;
+        }
+        .gallery img:hover{
+            transform: scale(1.5);
+        }
     </style>
 </head>
 <body>
@@ -350,7 +365,16 @@
                 </div>
             </div>
         </div>
+        <div class="gallery">
+            <img src="design1.png" alt="">
+            <img src="design2.png" alt="">
+            <img src="design4.jpg" alt="">
+            <img src="design3.png" alt="">
+            <img src="design5.png" alt="">
+            <img src="design6.png" alt="">
+        </div>
     </div>
+
 </div>
 </body>
 </html>
