@@ -209,8 +209,33 @@
             color: #fff;
         }
 
-        #tema-dark:checked ~ .body .topblock{
+        #tema-dark:checked ~ .body .topblock {
             background: #051e3e;
+        }
+
+        .logo {
+            background: #1C88F3;
+            width: 134px;
+            height: 130px;
+            clip-path: polygon(50% 10%, 85% 25%, 85% 70%, 50% 85%, 15% 70%, 15% 25%);
+            transition: all 0.3s linear;
+        }
+
+        .logo-border {
+            width: 134px;
+            height: 130px;
+            background: #e9eaec url("Image1.png") no-repeat 5px 20px;
+            background-size: 100% auto;
+            transition: all 0.3s linear;
+            clip-path: polygon(50% 12%, 83% 26%, 83% 69%, 50% 83%, 17% 69%, 17% 26%);
+        }
+
+        .logo:hover {
+            clip-path: polygon(50% 10%, 85% 10%, 85% 85%, 50% 85%, 15% 85%, 15% 10%);
+        }
+
+        .logo:hover .logo-border {
+            clip-path: polygon(50% 12%, 83% 12%, 83% 83%, 50% 83%, 17% 83%, 17% 12%);
         }
     </style>
 </head>
@@ -224,7 +249,8 @@
         <div class="conteiner">
             <div class="top-left">
                 <div class="logo">
-                    <img src="Group_14.png" alt="">
+                    <div class="logo-border">
+                    </div>
                 </div>
                 <div class="name">
                     <b>MD. TOWFIQUR RAHMAN</b><br>
