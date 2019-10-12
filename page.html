@@ -4,25 +4,35 @@
     <meta charset="UTF-8">
     <title>Booklov</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
+
     <style>
-        body{
+        body, html {
+            margin: 0;
+            height: 100%;
+            padding: 0;
+        }
+
+        body, html {
             font-family: "Open Sans", serif;
             font-size: 16px;
             line-height: 1.6;
             color: #333;
-            margin: 0;
         }
-        *, *:before, *:after{
+
+        *, *:before, *:after {
             box-sizing: border-box;
         }
-        .conteiner{
+
+        .conteiner {
             max-width: 655px;
             margin: 0 auto;
         }
-        .topblock{
+
+        .topblock {
             background: #2f4b6e;
         }
-        .topblock .conteiner{
+
+        .topblock .conteiner {
             height: 190px;
             display: flex;
             align-items: center;
@@ -30,64 +40,77 @@
             padding: 0 60px 0 27px;
             justify-content: space-between;
         }
-        .top-left{
+
+        .top-left {
             display: flex;
             align-items: center;
         }
-        .name{
+
+        .name {
             font-size: 10px;
             line-height: 14px;
         }
-        .name b{
+
+        .name b {
             font-weight: bold;
             font-size: 13px;
             line-height: 18px;
         }
-        .line{
+
+        .line {
             display: flex;
             align-items: center;
             font-size: 10px;
             line-height: 14px;
             margin: 5px 0;
         }
-        .line span{
+
+        .line span {
             width: 24px;
             display: flex;
         }
-        .botblock{
+
+        .botblock {
             display: flex;
         }
-        .colonka{
+
+        .colonka {
             flex-grow: 1;
             width: 50%;
             padding: 0 50px;
         }
-        .element{
+
+        .element {
             font-size: 10px;
             line-height: 14px;
             padding-left: 12px;
         }
-        .element h1{
+
+        .element h1 {
             font-size: 13px;
             line-height: 18px;
             font-weight: 400;
             margin: 33px 0 33px -12px;
         }
-        .element h1 span{
+
+        .element h1 span {
             width: 12px;
             display: inline-block;
         }
-        .calendar{
+
+        .calendar {
 
         }
-        .cal-elem{
+
+        .cal-elem {
             font-size: 10px;
             line-height: 14px;
             padding-left: 28px;
             position: relative;
             margin-top: 18px;
         }
-        .cal-elem:before{
+
+        .cal-elem:before {
             position: absolute;
             left: 0;
             top: 0;
@@ -95,10 +118,11 @@
             height: 16px;
             border-radius: 50%;
             background: #1C88F3;
-            content:"";
+            content: "";
             border: white solid 2px;
             z-index: 5;
         }
+
         .cal-elem:after {
             position: absolute;
             left: 7px;
@@ -108,136 +132,195 @@
             background: #1C88F3;
             content: "";
         }
-        .cal-elem:last-child:after{
+
+        .cal-elem:last-child:after {
             display: none;
         }
-        .cal-elem-name{
+
+        .cal-elem-name {
             margin-bottom: 8px;
         }
-        .cal-elem-date{
+
+        .cal-elem-date {
             margin: 8px 0;
         }
-        .graycolor{
+
+        .graycolor {
             color: #989898;
         }
-        .elem-pict{
+
+        .elem-pict {
             overflow: hidden;
         }
-        .elem-pict-tree{
+
+        .elem-pict-tree {
             float: left;
             margin: 0 6px 6px 0;
         }
-        .elem-pict-top{
+
+        .elem-pict-top {
             display: inline-block;
             vertical-align: middle;
         }
-        .text-rt{
+
+        .text-rt {
             transform: scaleX(-1);
         }
-        .calendar-mod p{
+
+        .calendar-mod p {
             margin: 4px 0;
         }
-        .calendar-mod .cal-elem{
+
+        .calendar-mod .cal-elem {
             padding-bottom: 15px;
+        }
+
+        .button {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            background: #333333;
+            color: #989898;
+            border: 1px solid #989898;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            font-size: 12px;
+            line-height: 14px;
+        }
+
+        #tema-light,
+        #tema-dark {
+            position: absolute;
+            opacity: 0;
+        }
+
+        #tema-light:checked ~ .button-light,
+        #tema-dark:checked ~ .button-dark {
+            display: none;
+        }
+
+        .body {
+            min-height: 100%;
+        }
+
+        #tema-dark:checked ~ .body {
+            background: #2f4b6e;
+            color: #fff;
+        }
+
+        #tema-dark:checked ~ .body .topblock{
+            background: #051e3e;
         }
     </style>
 </head>
 <body>
-<div class="topblock">
-    <div class="conteiner">
-        <div class="top-left">
-            <div class="logo">
-                <img src="Group_14.png" alt="">
+<input id="tema-light" type="radio" name="theme" checked>
+<input id="tema-dark" type="radio" name="theme">
+<label class="button button-light" for="tema-light">Светлая тема</label>
+<label class="button button-dark" for="tema-dark">Темная тема</label>
+<div class="body">
+    <div class="topblock">
+        <div class="conteiner">
+            <div class="top-left">
+                <div class="logo">
+                    <img src="Group_14.png" alt="">
+                </div>
+                <div class="name">
+                    <b>MD. TOWFIQUR RAHMAN</b><br>
+                    UI/UX Designer
+                </div>
             </div>
-            <div class="name">
-                <b>MD. TOWFIQUR RAHMAN</b><br>
-                UI/UX Designer
+            <div class="top-right">
+                <div class="line"><span><img src="feather_mail.svg" alt=""></span>towfiqpiash@gmail.com</div>
+                <div class="line"><span><img src="feather_phone.svg" alt=""></span>01722486102</div>
+                <div class="line"><span><img src="feather_map_pin.svg" alt=""></span>Dhaka, Bangladesh</div>
             </div>
-        </div>
-        <div class="top-right">
-            <div class="line"><span><img src="feather_mail.svg" alt=""></span>towfiqpiash@gmail.com</div>
-            <div class="line"><span><img src="feather_phone.svg" alt=""></span>01722486102</div>
-            <div class="line"><span><img src="feather_map_pin.svg" alt=""></span>Dhaka, Bangladesh</div>
         </div>
     </div>
-</div>
-<div class="conteiner">
-    <div class="botblock">
-        <div class="colonka">
-            <div class="element">
-                <h1><span><img src="Group_41.svg" alt=""></span><b>ABOUT</b> ME</h1>
-                <p>I'm focused on solving problems by creating meaningful experience through design. I love to take
-                    new challenge and am able to take ideas from concept to wireframe to prototype to production.</p>
-            </div>
-            <div class="element">
-                <h1><span><img src="Group_41.svg" alt=""></span><b>WORK</b> HISTORY</h1>
-                <div class="calendar">
-                    <div class="cal-elem">
-                        <div class="cal-elem-name">
-                            <b>UI/UX Designer</b> @Ajkerdeal
-                        </div>
-                        <div class="cal-elem-date">
-                            October 2018 - Now
-                        </div>
-                        <p>Designed full UI of a brand new app from scratch, brought couple of new features to life and
-                            improved few existing products' user experience.</p>
-                    </div>
-                    <div class="cal-elem graycolor">
-                        <div class="cal-elem-name">
-                            <b>SOFTWARE ENGINEER</b> @Beshtor
-                        </div>
-                        <div class="cal-elem-date">
-                            September 2014 - Now
-                        </div>
-                        <p>Involved in developing web apps & and improving existing service</p>
-                    </div>
+    <div class="conteiner">
+        <div class="botblock">
+            <div class="colonka">
+                <div class="element">
+                    <h1><span><img src="Group_41.svg" alt=""></span><b>ABOUT</b> ME</h1>
+                    <p>I'm focused on solving problems by creating meaningful experience through design. I love to take
+                        new challenge and am able to take ideas from concept to wireframe to prototype to
+                        production.</p>
                 </div>
-            </div>
-            <div class="element">
-                <h1><span><img src="Group_41.svg" alt=""></span><b>CORE</b> SKILLSET</h1>
-                <p>Design Thinking, Competitor Analysis, User Research, Personas, User Journeys, Sketching, Wireframes,
-                    Design System, Rapid Prototyping, UI Design, Interaction Design, User-centered Design, Usability
-                    Testing</p>
-                <p>HTML5/CSS3, JavaScript, jQuery, Bootstrap, MaterializeCSS, GitHub, Icon Design, Typography</p>
-            </div>
-        </div>
-        <div class="colonka">
-            <div class="element">
-                <h1><span><img src="Group_41.svg" alt=""></span><b>VENDOR</b> CERTIFICATION</h1>
-                <div class="elem-pict">
-                    <img class="elem-pict-tree" src="idf-logo-full-texttry-0.svg" alt="">Design Thinking: The Beginner's Guide
-                    <img class="elem-pict-top" src="Group_44.svg" alt="">
-                </div>
-                <p class="text-rt">https://www.interaction-design.org/ towfiqpiash/certificate/course/PdrndMQBT</p>
-            </div>
-            <div class="element">
-                <h1><span><img src="Group_41.svg" alt=""></span><b>ACADEMIC</b> BACKGROUND</h1>
-                <div class="calendar calendar-mod">
-                    <div class="cal-elem">
-                        <div class="cal-elem-name">
-                            <b>BSC in CSEr</b>(2014)
+                <div class="element">
+                    <h1><span><img src="Group_41.svg" alt=""></span><b>WORK</b> HISTORY</h1>
+                    <div class="calendar">
+                        <div class="cal-elem">
+                            <div class="cal-elem-name">
+                                <b>UI/UX Designer</b> @Ajkerdeal
+                            </div>
+                            <div class="cal-elem-date">
+                                October 2018 - Now
+                            </div>
+                            <p>Designed full UI of a brand new app from scratch, brought couple of new features to life
+                                and
+                                improved few existing products' user experience.</p>
                         </div>
-                        <p>Mawlana Bhashani Science & Technology University</p>
-                        <p>CGPA: 3.03</p>
-                    </div>
-                    <div class="cal-elem">
-                        <div class="cal-elem-name">
-                            <b>HSC</b>(2008)
+                        <div class="cal-elem graycolor">
+                            <div class="cal-elem-name">
+                                <b>SOFTWARE ENGINEER</b> @Beshtor
+                            </div>
+                            <div class="cal-elem-date">
+                                September 2014 - Now
+                            </div>
+                            <p>Involved in developing web apps & and improving existing service</p>
                         </div>
-                        <p>Science . Dhaka Board</p>
-                        <p>GPA: 5.00</p>
-                    </div>
-                    <div class="cal-elem">
-                        <div class="cal-elem-name">
-                            <b>SSC</b> (2006)
-                        </div>
-                        <p>Science . Dhaka Board</p>
-                        <p>GPA: 5.00</p>
                     </div>
                 </div>
                 <div class="element">
-                    <h1><span><img src="Group_41.svg" alt=""></span><b>TOOLS</b> I USE</h1>
-                    <p>Photoshop, Illustrator, Protopie, Adobe XD, Zeplin, After Effects (basic), Invision Studio, Figma, Blender (basic),</p>
+                    <h1><span><img src="Group_41.svg" alt=""></span><b>CORE</b> SKILLSET</h1>
+                    <p>Design Thinking, Competitor Analysis, User Research, Personas, User Journeys, Sketching,
+                        Wireframes,
+                        Design System, Rapid Prototyping, UI Design, Interaction Design, User-centered Design, Usability
+                        Testing</p>
+                    <p>HTML5/CSS3, JavaScript, jQuery, Bootstrap, MaterializeCSS, GitHub, Icon Design, Typography</p>
+                </div>
+            </div>
+            <div class="colonka">
+                <div class="element">
+                    <h1><span><img src="Group_41.svg" alt=""></span><b>VENDOR</b> CERTIFICATION</h1>
+                    <div class="elem-pict">
+                        <img class="elem-pict-tree" src="idf-logo-full-texttry-0.svg" alt="">Design Thinking: The
+                        Beginner's Guide
+                        <img class="elem-pict-top" src="Group_44.svg" alt="">
+                    </div>
+                    <p class="text-rt">https://www.interaction-design.org/ towfiqpiash/certificate/course/PdrndMQBT</p>
+                </div>
+                <div class="element">
+                    <h1><span><img src="Group_41.svg" alt=""></span><b>ACADEMIC</b> BACKGROUND</h1>
+                    <div class="calendar calendar-mod">
+                        <div class="cal-elem">
+                            <div class="cal-elem-name">
+                                <b>BSC in CSEr</b>(2014)
+                            </div>
+                            <p>Mawlana Bhashani Science & Technology University</p>
+                            <p>CGPA: 3.03</p>
+                        </div>
+                        <div class="cal-elem">
+                            <div class="cal-elem-name">
+                                <b>HSC</b>(2008)
+                            </div>
+                            <p>Science . Dhaka Board</p>
+                            <p>GPA: 5.00</p>
+                        </div>
+                        <div class="cal-elem">
+                            <div class="cal-elem-name">
+                                <b>SSC</b> (2006)
+                            </div>
+                            <p>Science . Dhaka Board</p>
+                            <p>GPA: 5.00</p>
+                        </div>
+                    </div>
+                    <div class="element">
+                        <h1><span><img src="Group_41.svg" alt=""></span><b>TOOLS</b> I USE</h1>
+                        <p>Photoshop, Illustrator, Protopie, Adobe XD, Zeplin, After Effects (basic), Invision Studio,
+                            Figma, Blender (basic),</p>
+                    </div>
                 </div>
             </div>
         </div>
