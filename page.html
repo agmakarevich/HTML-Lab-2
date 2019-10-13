@@ -93,16 +93,18 @@
             transition: color .3s linear;
         }
 
-        .element h1 .fa{
+        .element h1 .fa {
             width: 16px;
             font-size: 12px;
             color: #1C88F3;
             transition: color .3s linear;
         }
-        .element h1:hover{
+
+        .element h1:hover {
             color: #1C88F3;
         }
-        .element h1:hover .fa{
+
+        .element h1:hover .fa {
             color: #2f4b6e;
         }
 
@@ -159,11 +161,25 @@
 
         .elem-pict {
             overflow: hidden;
+            margin-bottom: 15px;
         }
 
-        .elem-pict-tree {
+        .elem-pict-img {
             float: left;
-            margin: 0 6px 6px 0;
+            padding: 6px 6px 6px 0;
+        }
+
+        .circle {
+            shape-outside: circle(50%);
+        }
+
+        .romb {
+            shape-outside: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+            padding-right: 20px;
+        }
+
+        .elem-pict-img img {
+            width: 50px;
         }
 
         .elem-pict-top {
@@ -245,7 +261,8 @@
         .logo:hover .logo-border {
             clip-path: polygon(50% 12%, 83% 12%, 83% 83%, 50% 83%, 17% 83%, 17% 12%);
         }
-        .gallery{
+
+        .gallery {
             text-align: center;
             display: flex;
             flex-wrap: wrap;
@@ -253,18 +270,22 @@
             justify-content: space-around;
             margin-top: 20px;
         }
-        .gallery img{
+
+        .gallery img {
             width: 30%;
             margin-bottom: 20px;
         }
-        .gallery img:hover{
+
+        .gallery img:hover {
             transform: scale(1.5);
         }
-        .line .fa{
+
+        .line .fa {
             font-size: 14px;
             width: 24px;
         }
-        .line:hover{
+
+        .line:hover {
             color: #1C88F3;
         }
     </style>
@@ -350,8 +371,30 @@
                 <div class="element">
                     <h1><i class="fa fa-pause"></i><b>VENDOR</b> CERTIFICATION</h1>
                     <div class="elem-pict">
-                        <img class="elem-pict-tree" src="idf-logo-full-texttry-0.svg" alt="">Design Thinking: The
-                        Beginner's Guide
+                        <div class="elem-pict-img circle">
+                            <img src="idf-logo-full-texttry-0.svg" alt="">
+                        </div>
+                        Design Thinking: The Beginner's Guide Design Thinking: The Beginner's Guide Design Thinking: The
+                        Beginner's Guide Design Thinking: The Beginner's Guide Design Thinking: The Beginner's Guide
+                        Design Thinking: The Beginner's Guide
+                        <img class="elem-pict-top" src="Group_44.svg" alt="">
+                    </div>
+                    <div class="elem-pict">
+                        <div class="elem-pict-img">
+                            <img src="idf-logo-full-texttry-0.svg" alt="">
+                        </div>
+                        Design Thinking: The Beginner's Guide Design Thinking: The Beginner's Guide Design Thinking: The
+                        Beginner's Guide Design Thinking: The Beginner's Guide Design Thinking: The Beginner's Guide
+                        Design Thinking: The Beginner's Guide
+                        <img class="elem-pict-top" src="Group_44.svg" alt="">
+                    </div>
+                    <div class="elem-pict">
+                        <div class="elem-pict-img romb">
+                            <img src="idf-logo-full-texttry-0.svg" alt="">
+                        </div>
+                        Design Thinking: The Beginner's Guide Design Thinking: The Beginner's Guide Design Thinking: The
+                        Beginner's Guide Design Thinking: The Beginner's Guide Design Thinking: The Beginner's Guide
+                        Design Thinking: The Beginner's Guide
                         <img class="elem-pict-top" src="Group_44.svg" alt="">
                     </div>
                     <p class="text-rt">https://www.interaction-design.org/ towfiqpiash/certificate/course/PdrndMQBT</p>
