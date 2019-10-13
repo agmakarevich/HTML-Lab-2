@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Booklov</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
     <style>
         body, html {
             margin: 0;
@@ -63,11 +63,7 @@
             font-size: 10px;
             line-height: 14px;
             margin: 5px 0;
-        }
-
-        .line span {
-            width: 24px;
-            display: flex;
+            transition: color .3s linear;
         }
 
         .botblock {
@@ -90,12 +86,24 @@
             font-size: 13px;
             line-height: 18px;
             font-weight: 400;
-            margin: 33px 0 33px -12px;
+            margin: 33px 0 33px -16px;
+            display: flex;
+            align-items: center;
+            align-content: center;
+            transition: color .3s linear;
         }
 
-        .element h1 span {
-            width: 12px;
-            display: inline-block;
+        .element h1 .fa{
+            width: 16px;
+            font-size: 12px;
+            color: #1C88F3;
+            transition: color .3s linear;
+        }
+        .element h1:hover{
+            color: #1C88F3;
+        }
+        .element h1:hover .fa{
+            color: #2f4b6e;
         }
 
         .calendar {
@@ -252,6 +260,13 @@
         .gallery img:hover{
             transform: scale(1.5);
         }
+        .line .fa{
+            font-size: 14px;
+            width: 24px;
+        }
+        .line:hover{
+            color: #1C88F3;
+        }
     </style>
 </head>
 <body>
@@ -273,9 +288,18 @@
                 </div>
             </div>
             <div class="top-right">
-                <div class="line"><span><img src="feather_mail.svg" alt=""></span>towfiqpiash@gmail.com</div>
-                <div class="line"><span><img src="feather_phone.svg" alt=""></span>01722486102</div>
-                <div class="line"><span><img src="feather_map_pin.svg" alt=""></span>Dhaka, Bangladesh</div>
+                <div class="line">
+                    <i class="fa fa-envelope-o"></i>
+                    towfiqpiash@gmail.com
+                </div>
+                <div class="line">
+                    <i class="fa fa-phone"></i>
+                    01722486102
+                </div>
+                <div class="line">
+                    <i class="fa fa-map-marker"></i>
+                    Dhaka, Bangladesh
+                </div>
             </div>
         </div>
     </div>
@@ -283,13 +307,13 @@
         <div class="botblock">
             <div class="colonka">
                 <div class="element">
-                    <h1><span><img src="Group_41.svg" alt=""></span><b>ABOUT</b> ME</h1>
+                    <h1><i class="fa fa-pause"></i><b>ABOUT</b> ME</h1>
                     <p>I'm focused on solving problems by creating meaningful experience through design. I love to take
                         new challenge and am able to take ideas from concept to wireframe to prototype to
                         production.</p>
                 </div>
                 <div class="element">
-                    <h1><span><img src="Group_41.svg" alt=""></span><b>WORK</b> HISTORY</h1>
+                    <h1><i class="fa fa-pause"></i><b>WORK</b> HISTORY</h1>
                     <div class="calendar">
                         <div class="cal-elem">
                             <div class="cal-elem-name">
@@ -314,7 +338,7 @@
                     </div>
                 </div>
                 <div class="element">
-                    <h1><span><img src="Group_41.svg" alt=""></span><b>CORE</b> SKILLSET</h1>
+                    <h1><i class="fa fa-pause"></i><b>CORE</b> SKILLSET</h1>
                     <p>Design Thinking, Competitor Analysis, User Research, Personas, User Journeys, Sketching,
                         Wireframes,
                         Design System, Rapid Prototyping, UI Design, Interaction Design, User-centered Design, Usability
@@ -324,7 +348,7 @@
             </div>
             <div class="colonka">
                 <div class="element">
-                    <h1><span><img src="Group_41.svg" alt=""></span><b>VENDOR</b> CERTIFICATION</h1>
+                    <h1><i class="fa fa-pause"></i><b>VENDOR</b> CERTIFICATION</h1>
                     <div class="elem-pict">
                         <img class="elem-pict-tree" src="idf-logo-full-texttry-0.svg" alt="">Design Thinking: The
                         Beginner's Guide
@@ -333,7 +357,7 @@
                     <p class="text-rt">https://www.interaction-design.org/ towfiqpiash/certificate/course/PdrndMQBT</p>
                 </div>
                 <div class="element">
-                    <h1><span><img src="Group_41.svg" alt=""></span><b>ACADEMIC</b> BACKGROUND</h1>
+                    <h1><i class="fa fa-pause"></i><b>ACADEMIC</b> BACKGROUND</h1>
                     <div class="calendar calendar-mod">
                         <div class="cal-elem">
                             <div class="cal-elem-name">
@@ -358,7 +382,7 @@
                         </div>
                     </div>
                     <div class="element">
-                        <h1><span><img src="Group_41.svg" alt=""></span><b>TOOLS</b> I USE</h1>
+                        <h1><i class="fa fa-pause"></i><b>TOOLS</b> I USE</h1>
                         <p>Photoshop, Illustrator, Protopie, Adobe XD, Zeplin, After Effects (basic), Invision Studio,
                             Figma, Blender (basic),</p>
                     </div>
