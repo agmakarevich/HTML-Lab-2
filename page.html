@@ -93,6 +93,10 @@
             transition: color .3s linear;
         }
 
+        .element h1 b {
+            padding-right: 3px;
+        }
+
         .element h1 .fa {
             width: 16px;
             font-size: 12px;
@@ -106,45 +110,6 @@
 
         .element h1:hover .fa {
             color: #2f4b6e;
-        }
-
-        .calendar {
-
-        }
-
-        .cal-elem {
-            font-size: 10px;
-            line-height: 14px;
-            padding-left: 28px;
-            position: relative;
-            margin-top: 18px;
-        }
-
-        .cal-elem:before {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 16px;
-            height: 16px;
-            border-radius: 50%;
-            background: #1C88F3;
-            content: "";
-            border: white solid 2px;
-            z-index: 5;
-        }
-
-        .cal-elem:after {
-            position: absolute;
-            left: 7px;
-            top: 0;
-            bottom: -18px;
-            width: 2px;
-            background: #1C88F3;
-            content: "";
-        }
-
-        .cal-elem:last-child:after {
-            display: none;
         }
 
         .cal-elem-name {
@@ -191,12 +156,8 @@
             transform: scaleX(-1);
         }
 
-        .calendar-mod p {
+        .grid-text p {
             margin: 4px 0;
-        }
-
-        .calendar-mod .cal-elem {
-            padding-bottom: 15px;
         }
 
         .button {
@@ -288,6 +249,45 @@
         .line:hover {
             color: #1C88F3;
         }
+
+        .grid-calendar {
+            display: grid;
+            grid-template-columns: 28px auto;
+            grid-gap: 0;
+        }
+
+        .grid-text {
+            font-size: 10px;
+            line-height: 14px;
+            padding-bottom: 15px;
+        }
+
+        .grid-line {
+            position: relative;
+        }
+
+        .grid-line-round:before {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: #1C88F3;
+            content: "";
+            border: white solid 2px;
+            z-index: 5;
+        }
+
+        .grid-line-line:after {
+            position: absolute;
+            left: 7px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #1C88F3;
+            content: "";
+        }
     </style>
 </head>
 <body>
@@ -335,8 +335,9 @@
                 </div>
                 <div class="element">
                     <h1><i class="fa fa-pause"></i><b>WORK</b> HISTORY</h1>
-                    <div class="calendar">
-                        <div class="cal-elem">
+                    <div class="grid-calendar">
+                        <div class="grid-line grid-line-round grid-line-line"></div>
+                        <div class="grid-text">
                             <div class="cal-elem-name">
                                 <b>UI/UX Designer</b> @Ajkerdeal
                             </div>
@@ -347,7 +348,8 @@
                                 and
                                 improved few existing products' user experience.</p>
                         </div>
-                        <div class="cal-elem graycolor">
+                        <div class="grid-line grid-line-round"></div>
+                        <div class="grid-text graycolor">
                             <div class="cal-elem-name">
                                 <b>SOFTWARE ENGINEER</b> @Beshtor
                             </div>
@@ -401,22 +403,26 @@
                 </div>
                 <div class="element">
                     <h1><i class="fa fa-pause"></i><b>ACADEMIC</b> BACKGROUND</h1>
-                    <div class="calendar calendar-mod">
-                        <div class="cal-elem">
+
+                    <div class="grid-calendar">
+                        <div class="grid-line grid-line-round grid-line-line"></div>
+                        <div class="grid-text">
                             <div class="cal-elem-name">
                                 <b>BSC in CSEr</b>(2014)
                             </div>
                             <p>Mawlana Bhashani Science & Technology University</p>
                             <p>CGPA: 3.03</p>
                         </div>
-                        <div class="cal-elem">
+                        <div class="grid-line grid-line-round grid-line-line"></div>
+                        <div class="grid-text">
                             <div class="cal-elem-name">
                                 <b>HSC</b>(2008)
                             </div>
                             <p>Science . Dhaka Board</p>
                             <p>GPA: 5.00</p>
                         </div>
-                        <div class="cal-elem">
+                        <div class="grid-line grid-line-round"></div>
+                        <div class="grid-text">
                             <div class="cal-elem-name">
                                 <b>SSC</b> (2006)
                             </div>
